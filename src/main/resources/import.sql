@@ -1,0 +1,2 @@
+INSERT INTO tbl_persona (nombre, apellido,dni ,email, telefono,direccion,password) VALUES ('Daniel','Ñahuis','72369702','daniel.com','4856967','Jr.Rio Mantaro 615','DAKYD241');
+INSERT INTO tbl_alumno (id_persona,estado) VALUES (1,1);
