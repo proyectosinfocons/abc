@@ -12,6 +12,7 @@ public class Horario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long id_curso;
     private String dia;
     private String hora_inicio;
     private String hora_fin;
@@ -28,5 +29,6 @@ public class Horario {
         this.hora_inicio = hora_inicio;
         this.hora_fin = hora_fin;
         this.curso = curso;
+        this.id_curso = curso.getId();
     }
 }

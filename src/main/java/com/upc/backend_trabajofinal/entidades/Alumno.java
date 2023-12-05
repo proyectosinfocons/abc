@@ -1,6 +1,7 @@
 package com.upc.backend_trabajofinal.entidades;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,6 +29,7 @@ public class Alumno {
         this.codigo = codigo;
         this.persona = persona;
         this.estado = estado;
+        this.id_persona = persona.getCodigo();
     }
 
 }

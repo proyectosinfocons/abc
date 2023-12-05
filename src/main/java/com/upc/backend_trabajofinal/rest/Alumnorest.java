@@ -46,8 +46,4 @@ public class Alumnorest {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No existe el alumno con el codigo buscado", e);
         }
     }
-
-
-
-
 }

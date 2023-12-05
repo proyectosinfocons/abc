@@ -13,4 +13,8 @@ public interface ICalificacionRepositorio extends JpaRepository<Calificacion,Lon
     @Query("SELECT c FROM Calificacion c WHERE c.alumno.codigo = :alumnoId")
     List<Calificacion> findByIdAlumno(@Param("alumnoId") Long alumnoId);
 
+
+    @Query("SELECT c FROM Calificacion c WHERE c.unico = :unicoVal")
+    List<Calificacion> findByIdUnico(@Param("unicoVal") String unicoVal);
+
 }

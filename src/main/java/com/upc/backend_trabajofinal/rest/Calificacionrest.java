@@ -19,11 +19,23 @@ public class Calificacionrest {
         logger.info("Obteniendo calificaciones");
         return calificacionNegocio.obtenerCalificacion();
     }
+
+
     @GetMapping("/calificacion/{id}")
     public Object obtenerCalificacionesPorAlumno(@PathVariable("id") Long id) throws Exception {
         logger.info("Obteniendo calificacion");
         return calificacionNegocio.obtenerCalificacionesPorAlumno(id);
     }
+
+    @GetMapping("/calificacion_info/{unico}")
+    public Object obtenerCalificacionesPorIdUnico(@PathVariable("unico") String unico) throws Exception {
+        logger.info("Obteniendo calificacion");
+        var result = calificacionNegocio.obtenerCalificacionPorIdUnico(unico);
+        // Si la lista tiene elementos, devuelve el primer elemento; de lo contrario, devuelve null
+        return result.isEmpty() ? null : result.get(0);
+    }
+
+
     @PostMapping("/calificacion")
     public Object crearCalificacion(@RequestBody Calificacion calificacion) throws Exception {
         logger.info("Creando calificacion");
